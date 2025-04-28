@@ -1,0 +1,127 @@
+/*----Other Stylings can be found in normalize css file*/
+    html {
+      font-size: 62.5%;
+    }
+
+    :root {
+      --text-color-paragragh: hsla(0, 0%, 100%, 0.75);
+      --text-color-heading: hsl(0, 0%, 95%);
+      --card-1-bg-color: hsl(31, 77%, 52%);
+      --card-2-bg-color: hsl(184, 100%, 22%);
+      --card-3-bg-color: hsl(179, 100%, 13%);
+    }
+
+
+    body {
+      font-family: "Lexend Deca", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.5rem;
+
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+
+      color: var(--text-color-paragragh);
+      background-color: var(--text-color-heading);
+    }
+
+    h1 {
+      font-family: "Big Shoulders", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+      text-transform: uppercase;
+      line-height: 0;
+
+      color: var(--text-color-heading);
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 4rem;
+      gap: 2.5rem;
+    }
+
+    .card img {
+      width: 5rem;
+    }
+
+    .card p {
+      line-height: 1.6;
+      margin-top: -1rem;
+    }
+
+    .card a {
+      margin-top: 5rem;
+      text-decoration: none;
+      border: 2px solid var(--text-color-heading);
+      border-radius: 2rem;
+      padding: 1rem 2.5rem;
+      background-color: white;
+    }
+
+    .card-1 {
+      background-color: var(--card-1-bg-color);
+    }
+
+    .card-1 a {
+      color: var(--card-1-bg-color);
+    }
+
+
+    .card-2 {
+      background-color: var(--card-2-bg-color);
+    }
+
+    .card-2 a {
+      color: var(--card-2-bg-color);
+    }
+
+
+    .card-3 {
+      background-color: var(--card-3-bg-color);
+    }
+
+    .card-3 a {
+      color: var(--card-3-bg-color);
+    }
+
+    .card a:hover {
+      background-color: transparent;
+      color: var(--text-color-heading);
+      border: 2px solid var(--text-color-paragragh);
+      cursor: pointer;
+    }
+
+    /*---------MEDIA QUERY-----------*/
+    @media (min-width: 768px) {
+      .card-container {
+        max-width: 768px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .card-container {
+        max-width: 865px;
+      }
+    }
+
+    .attribution { 
+      font-size: 11px; 
+      text-align: center; 
+      color: var(--card-3-bg-color);
+      margin-top: 1rem;
+    }
+    .attribution a { 
+      color: var(--card-1-bg-color); 
+      text-decoration: none;
+    }
